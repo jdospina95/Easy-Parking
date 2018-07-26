@@ -1,0 +1,34 @@
+{
+  "name": "EasyParking",
+  "version": "1.0.0",
+  "description": "WebApp Responsive para el control de parqueadros en la PUJ Cali",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PontiSoft",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "bootstrap": "*",
+    "plotly": "*",
+    "futures": "*",
+    "fs": "*",
+    "cheerio": "*",
+    "amcharts": "*"
+  }
+}
