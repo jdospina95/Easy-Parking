@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parqueadero</title>
+    <style>
+        div {
+            background-color: rgba(0, 204, 0, 0.6);
+            border-radius: 10px;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+	<body>
+		<section style="position:fixed; height:100%; width:60%; left:25%; border:solid black">
+			<img style="height:100%;width:100%;" src="/public/images/mapa.jpg" class="img-responsive">
+			<div style="top:2.7%; left:68.9%; height:27%; width:6%;" class="lagobajo"><strong class="lagobajo">1</strong></div>
+			<div style="top:2.7%; left:56.6%; height:27%; width:12.2%;" class="lagoalto"><strong class="lagoalto">2</strong></div>
+			<div style="top:29.8%; left:56.5%; height:19%; width:20%;" class="guayacanes"><strong class="guayacanes">3</strong></div>
+			<div style="top:49%; left:56.5%; height:31.5%; width:20%;" class="palmas"><strong class="palmas">4</strong></div>
+			<div style="top:80.8%; left:36%; height:15%; width:41%;" class="abc"><strong class="abc">5</strong></div>
+			<div style="top:73%; left:30%; height:23%; width:5.9%;" class="profesores"><strong class="profesores">15</strong></div>
+		</section>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+    			$("section div").each(function( index ) {
+    				if(parseInt($( this ).text()) > 7){					//FALTA ACORDAR LOS VALORES PARA LOS QUE CAMBIA DE COLOR
+    					$( this ).css("background-color", "rgba(0, 204, 0, 0.6)");
+    				}else if(parseInt($( this ).text()) > 3){
+    					$( this ).css("background-color", "rgba(255, 255, 0, 0.6)");
+    				}else{
+    					$( this ).css("background-color", "rgba(255, 0, 0, 0.6)");
+    				}
+				});
+			});
+		</script>
+		<!--<script src="node_modules/bootstrap/js/bootstrap.min.js"></script>-->
+	</body>
+</html>

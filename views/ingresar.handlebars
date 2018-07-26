@@ -1,0 +1,28 @@
+<h2 class="page-header">Ingresa Vehiculo</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/ingresar">
+    <div class="form-group">
+        <label>Placas Vehiculo</label>
+        <input type="text" class="form-control" placeholder="Placas Vehiculo" name="placas" pattern="[A-Z]{3}[0-9]{3}" title="Placas Formato XXX000">
+    </div>
+    <div class="form-group">
+        <label>Lugar</label>
+        <br>
+        <select name="lugar">
+          <option value="palmas" selected>Palmas</option>
+          <option value="guayacanes">Guayacanes</option> 
+          <option value="abc">Auditorio Alfonso Borrero Cabal</option>
+          <option value="profesores">Profesores</option>
+          <option value="lagoalto">Lago Alto</option>
+          <option value="lagobajo">Lago Bajo</option>
+          <option value="almendros">Almendros</option>
+          <option value="cdl">CDL</option>
+          <option value="loyola">Loyola</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-default">Enviar</button>
+</form>
